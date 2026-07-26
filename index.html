@@ -20,6 +20,19 @@
         </nav>
 
     </header>
+    <div id="panyeModal" class="panye-modal" style="display:none;">
+  <div class="panye-kontni">
+    <h2>Panye ou</h2>
+    <ul id="listAtik"></ul>
+    <p id="totalPri"></p>
+    <button onclick="fermenPanye()">Kontinye achte</button>
+    <div class="peman">
+      <p>Peye avèk:</p>
+      <button onclick="peye('MonCash')">MonCash</button>
+      <button onclick="peye('NatCash')">NatCash</button>
+    </div>
+  </div>
+</div>
 
     <main>
         <article class="produit">
@@ -38,7 +51,7 @@
 
 <article class="produit">
     <img src="chemiz1.jpg" alt="Chemiz">
-    <h2>Chemiz</h2>
+    <h2>Chemise</h2>
     <p class="prix">1200 HTG</p>
     <button type="button" onclick="ajoutePanye('Chemiz', 1200)">Achte</button>
 </article>  
