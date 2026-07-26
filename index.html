@@ -82,6 +82,44 @@
     document.getElementById('konpteur').textContent = panye.length;
     alert(non + " ajoute nan panye w!");
   }
+    function montrePanye() {
+    let liste = document.getElementById('listAtik');
+    let total = 0;
+    liste.innerHTML = "";
+
+    if (panye.length === 0) {
+      liste.innerHTML = "<li>Panye w vid</li>";
+    } else {
+      panye.forEach(function(atik, index) {
+        total += atik.pri;
+        let li = document.createElement('li');
+        li.innerHTML = atik.non + " - " + atik.pri + " HTG " +
+          "<button onclick='siprimeAtik(" + index + ")'>Siprime</button>";
+        liste.appendChild(li);
+      });
+    }
+
+    document.getElementById('totalPri').textContent = "Total: " + total + " HTG";
+    document.getElementById('panyeModal').style.display = "flex";
+  }
+
+  function siprimeAtik(index) {
+    panye.splice(index, 1);
+    document.getElementById('konpteur').textContent = panye.length;
+    montrePanye();
+  }
+
+  function fermenPanye() {
+    document.getElementById('panyeModal').style.display = "none";
+  }
+
+  function peye(metòd) {
+    if (panye.length === 0) {
+      alert("Panye w vid.");
+      return;
+    }
+    alert("Ou chwazi peye ak " + metòd + ". Nou pral kontakte w pou konfime peman an.");
+  }
 </script>
 </body>
 </html>
