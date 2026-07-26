@@ -33,6 +33,14 @@
     <footer>
         <p>Kontak nou: +509 43624063</p>
     </footer>
+<script>
+  let panye = [];
 
+  function ajoutePanye(non, pri) {
+    panye.push({ non: non, pri: pri });
+    document.getElementById('konpteur').textContent = panye.length;
+    alert(non + " ajoute nan panye w!");
+  }
+</script>
 </body>
 </html>
